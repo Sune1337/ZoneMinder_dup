@@ -172,7 +172,7 @@ void VideoStream::SetupCodec( int colours, int subpixelorder, int width, int hei
 		if ( of->video_codec ==  AV_CODEC_ID_NONE)
 		{
 			// RTP does not have a default codec in ffmpeg <= 0.8.
-			of->video_codec = CODEC_ID_MPEG4;
+			of->video_codec = AV_CODEC_ID_MPEG4;
 		}
 	}
 	
