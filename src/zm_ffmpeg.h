@@ -32,10 +32,12 @@ extern "C" {
 #include <libavutil/avutil.h>
 #include <libavutil/base64.h>
 #include <libavutil/mathematics.h>
+#include <libavutil/opt.h>
 #elif HAVE_FFMPEG_AVUTIL_H
 #include <ffmpeg/avutil.h>
 #include <ffmpeg/base64.h>
 #include <ffmpeg/mathematics.h>
+#include <ffmpeg/opt.h>
 #endif
 
 // AVCODEC
