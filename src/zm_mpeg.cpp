@@ -88,14 +88,14 @@ void VideoStream::SetupFormat( )
 		}
 	}
 	s->oformat = oformat;
-	
+    
 	if (s->oformat->priv_data_size > 0) {
 		s->priv_data = av_mallocz(s->oformat->priv_data_size);
 		if (!s->priv_data)
 		{
 			Fatal( "Could not allocate private data for output format." );
 		}
-#if LIBAVUTIL_VERSION_INT >= AV_VERSION_INT(51, 10, 0)
+#if LIBAVFORMAT_VERSION_INT >= AV_VERSION_INT(52, 92, 0)
 		if (s->oformat->priv_class) {
 			*(const AVClass**)s->priv_data = s->oformat->priv_class;
 			av_opt_set_defaults(s->priv_data);
